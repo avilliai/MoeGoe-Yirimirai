@@ -1,13 +1,14 @@
 # Links
 - [MoeGoe_GUI](https://github.com/CjangCjengh/MoeGoe_GUI)
 - 下载模型并放在voiceModel文件夹下[Pretrained models](https://sjtueducn-my.sharepoint.com/personal/cjang_cjengh_sjtu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang%2F1374%5Fepochs%2Epth&parent=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang&ga=1)
+- 请确保已安装[mirai-api-http](https://github.com/project-mirai/mirai-api-http)
 - [Yiri-mirai](https://github.com/YiriMiraiProject/YiriMirai)
 # How to use
 打开cmd运行如下命令
 
    pip install -r requirements.txt
 
-修改并运行bot.py
+修改并运行bot.py(修改QQ为你bot的QQ,port、key与你的mirai-api-http需要保持一致)
 
 
 

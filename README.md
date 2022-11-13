@@ -4,6 +4,7 @@
 - 请确保已安装[mirai-api-http](https://github.com/project-mirai/mirai-api-http)
 - [Yiri-mirai](https://github.com/YiriMiraiProject/YiriMirai)
 # How to use
+克隆仓库到本地
 打开cmd运行如下命令
 
    pip install -r requirements.txt

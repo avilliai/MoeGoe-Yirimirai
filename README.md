@@ -9,7 +9,9 @@
 克隆仓库到本地
 
 一定要记得修改根目录为名PythonPlugins
+
 修改成这样
+
 PythonPlugins\\bot.py
 
 打开cmd运行如下命令

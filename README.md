@@ -55,3 +55,7 @@ PythonPlugins\\bot.py
           M#1
           M#2
           M#3
+附加小功能
+
+         /pic数字
+ 

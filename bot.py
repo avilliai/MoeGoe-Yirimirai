@@ -96,6 +96,7 @@ if __name__ == '__main__':
                 voiceGenerate(tex, out)
                 await bot.send(event,Voice(path=out))
             else:
+                #以下五行代码可以作为调用文本转语音的示例
                 ranpath = random_str()
                 out = sys.argv[0][:-20]+'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
                 tex = '[JA]' + translate('不行,太长了哦.....') + '[JA]'
@@ -125,25 +126,15 @@ if __name__ == '__main__':
         if str(event.message_chain).startswith('连接群'):
             sa = str(event.message_chain).split('#')
             configPath='groupPath.txt'
-            if os.path.exists(configPath):
-                with open(configPath, mode='w', encoding='utf-8') as ff:
-                    ff.write(sa[1])
-                    await bot.send(event,'已载入配置文件')
-            else:
-                with open(configPath, mode='w', encoding='utf-8') as ff:
-                    print("已创建配置文件")
-                    ff.write(sa[1])
-                    await bot.send(event, '已载入配置文件')
+            with open(configPath, mode='w', encoding='utf-8') as ff:
+                ff.write(sa[1])
+                await bot.send(event,'已载入配置文件')
+                ff.close()
             statusPath = 'status.txt'
-            if os.path.exists(configPath):
-                with open(statusPath, mode='w', encoding='utf-8') as fs:
-                    fs.write(str(1))
-                    await bot.send(event, '已切换为群聊'+sa[1])
-            else:
-                with open(statusPath, mode='w', encoding='utf-8') as fs:
-                    print("已创建配置文件")
-                    fs.write(str(1))
-                    await bot.send(event, '已切换为群聊'+sa[1])
+            with open(statusPath, mode='w', encoding='utf-8') as fs:
+                fs.write(str(1))
+                await bot.send(event, '已切换为群聊'+sa[1])
+                fs.close()
 
     #连接人
     @bot.on(FriendMessage)
@@ -151,25 +142,16 @@ if __name__ == '__main__':
         if str(event.message_chain).startswith('连接对象'):
             sa = str(event.message_chain).split('#')
             configPath = 'friendPath.txt'
-            if os.path.exists(configPath):
-                with open(configPath, mode='w', encoding='utf-8') as ff:
-                    ff.write(sa[1])
-                    await bot.send(event, '已载入配置文件')
-            else:
-                with open(configPath, mode='w', encoding='utf-8') as ff:
-                    print("已创建配置文件")
-                    ff.write(sa[1])
-                    await bot.send(event, '已载入配置文件')
+            with open(configPath, mode='w', encoding='utf-8') as ff:
+                ff.write(sa[1])
+                ff.close()
+                await bot.send(event, '已载入配置文件')
+
             statusPath = 'status.txt'
-            if os.path.exists(statusPath):
-                with open(statusPath, mode='w', encoding='utf-8') as fs:
-                    fs.write(str(0))
-                    await bot.send(event, '已切换为私聊对象'+sa[1])
-            else:
-                with open(statusPath, mode='w', encoding='utf-8') as fs:
-                    print("已创建配置文件")
-                    fs.write(str(0))
-                    await bot.send(event, '已切换为私聊对象'+sa[1])
+            with open(statusPath, mode='w', encoding='utf-8') as fs:
+                fs.write(str(0))
+                fs.close()
+                await bot.send(event, '已切换为私聊对象'+sa[1])
 
     #语言切换
     @bot.on(FriendMessage)
@@ -177,28 +159,17 @@ if __name__ == '__main__':
         if str(event.message_chain).startswith('切换'):
             sa = str(event.message_chain)[2:]
             langPath = 'langPath.txt'
-            if os.path.exists(langPath):
-                with open(langPath, mode='w', encoding='utf-8') as ff:
-                    if sa=='中文':
-                        ff.write(sa)
-                        await bot.send(event, '已切换，当前使用语言'+sa)
-                    elif sa=='日语':
-                        ff.write(sa)
-                        await bot.send(event, '已切换，当前使用语言' + sa)
-                    else:
-                        await bot.send(event, '数值不合法，语言选择：中文/日语')
-            else:
-                with open(langPath, mode='w', encoding='utf-8') as ff:
-                    print("已创建配置文件")
-                    if sa == '中文':
-                        ff.write(sa)
-                        await bot.send(event, '已切换，当前使用语言' + sa)
-                    elif sa == '日语':
-                        ff.write(sa)
-                        await bot.send(event, '已切换，当前使用语言' + sa)
-                    else:
-                        await bot.send(event, '数值不合法，语言选择：中文/日语')
-
+            with open(langPath, mode='w', encoding='utf-8') as ff:
+                if sa=='中文':
+                    ff.write(sa)
+                    ff.close()
+                    await bot.send(event, '已切换，当前使用语言'+sa)
+                elif sa=='日语':
+                    ff.write(sa)
+                    ff.close()
+                    await bot.send(event, '已切换，当前使用语言' + sa)
+                else:
+                    await bot.send(event, '数值不合法，语言选择：中文/日语')
     #模型切换
     @bot.on(FriendMessage)
     async def on_friend_message(event: FriendMessage):
@@ -206,20 +177,11 @@ if __name__ == '__main__':
             sa = str(event.message_chain).split('#')
             ModePath = 'ModePath.txt'
             modelList = ['0', '1', '2', '3']
-            if os.path.exists(ModePath):
-                with open(ModePath, mode='w', encoding='utf-8') as ff:
-                    if sa[1] in modelList:
-                        ff.write(sa[1])
-                        await bot.send(event, '已切换，当前使用模型' + sa[1])
-                    else:
-                        await bot.send(event, '数值不合法，模型范围[0-3]')
-            else:
-                with open(ModePath, mode='w', encoding='utf-8') as ff:
-                    print("已创建配置文件")
-                    if sa[1] in modelList:
-                        ff.write(sa[1])
-                        await bot.send(event, '已切换，当前使用模型' + sa[1])
-                    else:
-                        await bot.send(event, '数值不合法，模型范围[0-3]')
+            with open(ModePath, mode='w', encoding='utf-8') as ff:
+                if sa[1] in modelList:
+                    ff.write(sa[1])
+                    await bot.send(event, '已切换，当前使用模型' + sa[1])
+                else:
+                    await bot.send(event, '数值不合法，模型范围[0-3]')
 
     bot.run()

@@ -102,8 +102,8 @@ if __name__ == '__main__':
                 voiceGenerate(tex, out)
                 await bot.send(event, Voice(path=out))
 
-
-    @bot.on(FriendMessage)
+    #失效
+    '''@bot.on(FriendMessage)
     async def handle_group_message(event: FriendMessage):
         if str(event.message_chain).startswith('#说'):
             if len(str(event.message_chain)) < 280:
@@ -117,7 +117,7 @@ if __name__ == '__main__':
                 out = sys.argv[0][:-20] + 'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
                 tex = '[JA]' + translate('不行,太长了哦.....') + '[JA]'
                 voiceGenerate(tex, out)
-                await bot(event, Voice(path=out))
+                await bot(event, Voice(path=out))'''
 
     #连接群
     @bot.on(FriendMessage)

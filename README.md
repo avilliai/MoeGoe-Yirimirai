@@ -1,64 +1,46 @@
 # Links
 - [MoeGoe_GUI](https://github.com/CjangCjengh/MoeGoe_GUI)
-- [Pretrained models](https://github.com/CjangCjengh/TTSModels)
-
+- 从这个链接下载模型并放在voiceModel文件夹下[Pretrained models](https://sjtueducn-my.sharepoint.com/personal/cjang_cjengh_sjtu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang%2F1374%5Fepochs%2Epth&parent=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang&ga=1)
+- [Yiri-mirai](https://github.com/YiriMiraiProject/YiriMirai)
 # How to use
-Run MoeGoe.exe
-```
-Path of a VITS model: path\to\model.pth
-Path of a config file: path\to\config.json
-INFO:root:Loaded checkpoint 'path\to\model.pth' (iteration XXX)
-```
-## Text to speech
-```
-TTS or VC? (t/v):t
-Text to read: こんにちは。
-ID      Speaker
-0       XXXX
-1       XXXX
-2       XXXX
-Speaker ID: 0
-Path to save: path\to\demo.wav
-Successfully saved!
-```
-## Voice conversion
-```
-TTS or VC? (t/v):v
-Path of an audio file to convert:
-path\to\origin.wav
-ID      Speaker
-0       XXXX
-1       XXXX
-2       XXXX
-Original speaker ID: 0
-Target speaker ID: 6
-Path to save: path\to\demo.wav
-Successfully saved!
-```
-## HuBERT-VITS
-```
-Path of a hubert-soft model: path\to\hubert-soft.pt
-Path of an audio file to convert:
-path\to\origin.wav
-ID      Speaker
-0       XXXX
-1       XXXX
-2       XXXX
-Target speaker ID: 6
-Path to save: path\to\demo.wav
-Successfully saved!
-```
-## W2V2-VITS
-```
-Path of a w2v2 dimensional emotion model: path\to\model.onnx
-TTS or VC? (t/v):t
-Text to read: こんにちは。
-ID      Speaker
-0       XXXX
-1       XXXX
-2       XXXX
-Speaker ID: 0
-Path of an emotion reference: path\to\reference.wav
-Path to save: path\to\demo.wav
-Successfully saved!
-```
+打开cmd运行如下命令
+
+   pip install -r requirements.txt
+
+修改并运行bot.py
+
+
+
+发送语音指令如下：
+-
+
+
+发送命令（私聊窗口用）
+
+      发送×××
+
+中文生成（给群友用）
+
+      #中文
+日语生成
+
+      #说
+
+向群聊发送（群号为示例）
+
+       连接群#699455559
+向个人发送（由于腾讯更新私聊语音加密，暂时不能用）
+
+        连接对象#1840094972
+
+语言切换
+
+         切换中文
+         切换日语
+ 
+模型切换
+
+          M#0
+          M#1
+          M#2
+          M#3

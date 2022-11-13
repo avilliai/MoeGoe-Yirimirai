@@ -7,6 +7,9 @@
 
 # How to use
 克隆仓库到本地
+
+一定要记得修改根目录为名PythonPlugins
+
 打开cmd运行如下命令
 
    pip install -r requirements.txt

@@ -79,8 +79,9 @@ def get_label(text, label):
     else:
         return False, text
 
-def voiceGenerate(tex,out):
+def voiceGenerate(tex,out,speakerId=0):
     Path = sys.argv[0][:-23]
+    speakerIDDD=speakerId
     text=tex
     out_path=out
     if '--escape' in sys.argv:
@@ -154,8 +155,8 @@ def voiceGenerate(tex,out):
             stn_tst = get_text(text, hps_ms, cleaned=cleaned)
 
             #print_speakers(speakers, escape)
-            print('正在使用语音模型：'+str(get_speaker_id('Speaker ID: '))+'......生成中')
-            speaker_id = get_speaker_id('Speaker ID: ')
+            print('正在使用语音模型：'+str(speakerIDDD)+'......生成中')
+            speaker_id = speakerIDDD
 
             with no_grad():
                 x_tst = stn_tst.unsqueeze(0)

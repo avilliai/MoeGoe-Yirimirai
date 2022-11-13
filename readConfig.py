@@ -1,19 +1,21 @@
-import numpy as np
 
+def readConfig():
+    with open('friendPath.txt', mode='r', encoding='utf-8') as ff:
+        aimFriend = ff.readline()
+        print('当前私聊' + aimFriend)
+    with open('groupPath.txt', mode='r', encoding='utf-8') as fd:
+        aimGroup = fd.readline()
+        print('当前群聊' + aimGroup)
+    with open('status.txt', mode='r', encoding='utf-8') as fs:
+        statusPath = fs.readline()
+        print('当前对象类型' + statusPath)
+    with open('ModePath.txt', mode='r', encoding='utf-8') as fa:
+        model = fa.readline()
+        print('当前模型' + model)
+        #modeSelect = int(modeSelects)
+    with open('langPath.txt', mode='r', encoding='utf-8') as la:
+        lang = la.readline()
+        print('当前语言' + lang)
 
-def readConfig(txt):
-    f = open(txt)
-    line = f.readline()
-    data_list = []
-    while line:
-        line = f.readline()
-        data_list.append(line)
-        print(line)
-    f.close()
-    return data_list
-
-if __name__ == '__main__':
-    txt = r"Config\moyu\groups.txt"
-    groupList = readConfig(txt)
-    for i in groupList:
-        print(type(i))
+    lista=[aimFriend,aimGroup,statusPath,model,lang]
+    return lista

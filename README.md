@@ -8,9 +8,9 @@
 # How to use
 克隆仓库到本地
 
-一定要记得修改根目录为名PythonPlugins
+一定要记得根目录是PythonPlugins
 
-修改成这样
+不是的话就修改成这样
 
 PythonPlugins\\bot.py
 

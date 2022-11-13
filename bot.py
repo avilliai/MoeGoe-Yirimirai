@@ -205,14 +205,14 @@ if __name__ == '__main__':
         if str(event.message_chain).startswith('M'):
             sa = str(event.message_chain).split('#')
             ModePath = 'ModePath.txt'
-            modelList = ['1', '2', '3', '4']
+            modelList = ['0', '1', '2', '3']
             if os.path.exists(ModePath):
                 with open(ModePath, mode='w', encoding='utf-8') as ff:
                     if sa[1] in modelList:
                         ff.write(sa[1])
                         await bot.send(event, '已切换，当前使用模型' + sa[1])
                     else:
-                        await bot.send(event, '数值不合法，模型范围[1-4]')
+                        await bot.send(event, '数值不合法，模型范围[0-3]')
             else:
                 with open(ModePath, mode='w', encoding='utf-8') as ff:
                     print("已创建配置文件")
@@ -220,6 +220,6 @@ if __name__ == '__main__':
                         ff.write(sa[1])
                         await bot.send(event, '已切换，当前使用模型' + sa[1])
                     else:
-                        await bot.send(event, '数值不合法，模型范围[1-4]')
+                        await bot.send(event, '数值不合法，模型范围[0-3]')
 
     bot.run()

@@ -4,68 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6759cfa-9daa-4a71-b4f2-be9a24dc1235" name="变更" comment="&#10;小改">
-      <change afterPath="$PROJECT_DIR$/ModePath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendPath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/langPath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/agakaUa$aNaGaka.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/apauaraga5aqafa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/avabaaa%aZaxa6a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/awa6aRakaka3a7a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/voices/target.amr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/voices/targrt.amr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonPlugins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonPlugins.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e6759cfa-9daa-4a71-b4f2-be9a24dc1235" name="变更" comment="改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupPath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/moyu/groups.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoYuPictures/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/formTrans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoeGoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/MoeGoe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/haiXiu/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/status.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PICTURE/p2/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/WeatherQuery/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/moyu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/newsEveryday.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/weatherQuery.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/readConfig.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -247,7 +189,8 @@
       <workItem from="1668267334672" duration="5000" />
       <workItem from="1668267352789" duration="4972000" />
       <workItem from="1668272967111" duration="1811000" />
-      <workItem from="1668304644899" duration="17182000" />
+      <workItem from="1668304644899" duration="18494000" />
+      <workItem from="1668340286141" duration="685000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;小改">
       <created>1668236812510</created>
@@ -263,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668329688724</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="改">
+      <created>1668330011340</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668330011340</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&#10;小改" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;小改" />
+    <MESSAGE value="改" />
+    <option name="LAST_COMMIT_MESSAGE" value="改" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonPlugins$moyu.coverage" NAME="moyu 覆盖结果" MODIFIED="1668244357107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plugins" />

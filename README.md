@@ -4,7 +4,7 @@
 - 
 - 下载模型并放在voiceModel文件夹下[Pretrained models](https://sjtueducn-my.sharepoint.com/personal/cjang_cjengh_sjtu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang%2F1374%5Fepochs%2Epth&parent=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang&ga=1)
 - 请确保已安装[mirai-api-http](https://github.com/project-mirai/mirai-api-http)
-
+下载release的话不用再下载模型了
 # How to use
 下载Release或
 克隆仓库到本地

@@ -75,7 +75,11 @@ if __name__ == '__main__':
                 if(os.path.exists(out)):
                     os.remove(out)
                 tex= '[ZH]'+((str(event.message_chain))[3:])+'[ZH]'
-                voiceGenerate(tex,out)
+                with open('ModePath.txt', mode='r', encoding='utf-8') as fa:
+                    model = fa.readline()
+                    fa.close()
+                    print('当前模型' + model)
+                voiceGenerate(tex, out,int(model))
                 await bot.send(event, Voice(path=out))
             else:
                 ranpath = random_str()
@@ -93,7 +97,12 @@ if __name__ == '__main__':
                 ranpath = random_str()
                 out = sys.argv[0][:-20]+'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
                 tex = '[JA]' + translate((str(event.message_chain))[2:]) + '[JA]'
-                voiceGenerate(tex, out)
+                #获取当前模型
+                with open('ModePath.txt', mode='r', encoding='utf-8') as fa:
+                    model = fa.readline()
+                    fa.close()
+                    print('当前模型' + model)
+                voiceGenerate(tex, out,int(model))
                 await bot.send(event,Voice(path=out))
             else:
                 #以下五行代码可以作为调用文本转语音的示例

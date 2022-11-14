@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6759cfa-9daa-4a71-b4f2-be9a24dc1235" name="变更" comment="写错个地方，改了">
+    <list default="true" id="e6759cfa-9daa-4a71-b4f2-be9a24dc1235" name="变更" comment="小改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/readConfig.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +193,8 @@
       <workItem from="1668340286141" duration="685000" />
       <workItem from="1668350798723" duration="1078000" />
       <workItem from="1668357627190" duration="72000" />
-      <workItem from="1668362606741" duration="299000" />
+      <workItem from="1668362606741" duration="673000" />
+      <workItem from="1668394576348" duration="1380000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;小改">
       <created>1668236812510</created>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668350827108</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="小改">
+      <created>1668363094021</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668363094021</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,12 +253,13 @@
     <MESSAGE value="&#10;小改" />
     <MESSAGE value="改" />
     <MESSAGE value="写错个地方，改了" />
-    <option name="LAST_COMMIT_MESSAGE" value="写错个地方，改了" />
+    <MESSAGE value="小改" />
+    <option name="LAST_COMMIT_MESSAGE" value="小改" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonPlugins$moyu.coverage" NAME="moyu 覆盖结果" MODIFIED="1668244357107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plugins" />
     <SUITE FILE_PATH="coverage/PythonPlugins$MoeGoe.coverage" NAME="MoeGoe 覆盖结果" MODIFIED="1668270908154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonPlugins$newsEveryday.coverage" NAME="newsEveryday 覆盖结果" MODIFIED="1668226129977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plugins" />
-    <SUITE FILE_PATH="coverage/PythonPlugins$bot.coverage" NAME="bot 覆盖结果" MODIFIED="1668351167167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonPlugins$bot.coverage" NAME="bot 覆盖结果" MODIFIED="1668363021613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

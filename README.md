@@ -6,13 +6,14 @@
 - 请确保已安装[mirai-api-http](https://github.com/project-mirai/mirai-api-http)
 
 # How to use
+下载Release或
 克隆仓库到本地
 
-一定要记得根目录是PythonPlugins
+    一定要记得根目录是PythonPlugins
 
-不是的话就修改成这样
+    不是的话就修改成这样
 
-PythonPlugins\\bot.py
+    PythonPlugins\\bot.py
 
 打开cmd运行如下命令
 

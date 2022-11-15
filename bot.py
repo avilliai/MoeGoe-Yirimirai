@@ -14,7 +14,7 @@ from trans import translate
 
 if __name__ == '__main__':
     bot = Mirai(3552663628, adapter=WebSocketAdapter(
-        verify_key='1234567890', host='localhost', port=23457
+        verify_key='1234567890', host='localhost', port=23456
     ))
     @bot.on(FriendMessage)
     async def yuYinMode(event: FriendMessage):
@@ -138,12 +138,10 @@ if __name__ == '__main__':
             with open(configPath, mode='w', encoding='utf-8') as ff:
                 ff.write(sa[1])
                 await bot.send(event,'已载入配置文件')
-                ff.close()
             statusPath = 'status.txt'
             with open(statusPath, mode='w', encoding='utf-8') as fs:
                 fs.write(str(1))
                 await bot.send(event, '已切换为群聊'+sa[1])
-                fs.close()
 
     #连接人
     @bot.on(FriendMessage)
@@ -153,13 +151,11 @@ if __name__ == '__main__':
             configPath = 'friendPath.txt'
             with open(configPath, mode='w', encoding='utf-8') as ff:
                 ff.write(sa[1])
-                ff.close()
                 await bot.send(event, '已载入配置文件')
 
             statusPath = 'status.txt'
             with open(statusPath, mode='w', encoding='utf-8') as fs:
                 fs.write(str(0))
-                fs.close()
                 await bot.send(event, '已切换为私聊对象'+sa[1])
 
     #语言切换
@@ -171,11 +167,9 @@ if __name__ == '__main__':
             with open(langPath, mode='w', encoding='utf-8') as ff:
                 if sa=='中文':
                     ff.write(sa)
-                    ff.close()
                     await bot.send(event, '已切换，当前使用语言'+sa)
                 elif sa=='日语':
                     ff.write(sa)
-                    ff.close()
                     await bot.send(event, '已切换，当前使用语言' + sa)
                 else:
                     await bot.send(event, '数值不合法，语言选择：中文/日语')

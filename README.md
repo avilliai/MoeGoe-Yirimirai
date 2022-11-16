@@ -41,7 +41,7 @@
       
 # How to use
 下载Release或
-克隆仓库到本地
+克隆仓库到本地(克隆记得去下载模型)
 
     一定要记得根目录是PythonPlugins
 

@@ -13,7 +13,7 @@ from readConfig import readConfig
 from trans import translate
 
 if __name__ == '__main__':
-    bot = Mirai(3552663628, adapter=WebSocketAdapter(
+    bot = Mirai(3093724179, adapter=WebSocketAdapter(
         verify_key='1234567890', host='localhost', port=23456
     ))
     @bot.on(FriendMessage)

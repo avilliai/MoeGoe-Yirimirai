@@ -1,5 +1,5 @@
 # Links
-- [MoeGoe_GUI](https://github.com/CjangCjengh/MoeGoe_GUI)
+- [MoeGoe_GUI](https://github.com/CjangCjengh/MoeGoe_GUI) 项目最核心的部分是CjangCjengh佬的[MoeGoe](https://github.com/CjangCjengh/MoeGoe)
 - [Yiri-mirai](https://github.com/YiriMiraiProject/YiriMirai)
 - python版本推荐3.9  不推荐python3.10
 - 下载模型并放在voiceModel文件夹下[Pretrained models](https://sjtueducn-my.sharepoint.com/personal/cjang_cjengh_sjtu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang%2F1374%5Fepochs%2Epth&parent=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang&ga=1)

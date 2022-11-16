@@ -8,21 +8,37 @@
 
 
 #可能的问题
+
     1
+    
       FileNotFoundError[Errno 2]: No such............ 
+      
       解决：out = sys.argv[0][:-20] + 'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
+      
             替换成
+            
            out='绝对路径\\PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
+           
     2
+    
       ModuleNotFoundError: no module named 'XXX'
+      
       解决：缺包，执行如下命令 
+      
       pip install XXX
+      
     3
+    
       TyreError: run() got an unexpected keyword argument 'debug'
+      
       解决：python版本不对，推荐换3.9.0
+      
     4
+    
       ConnectionRefusedError: [WinError 1225] 远程网络计算机拒绝连接
+      
       解决：bot.py的port,key,botqq与mirai-api-http配置不一致，修改对应即可
+      
 # How to use
 下载Release或
 克隆仓库到本地

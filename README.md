@@ -1,3 +1,7 @@
+#更新
+- 移除不必要的代码和文件。群内可切换语音模型
+
+
 # Links
 - 项目最核心的部分是CjangCjengh佬的[MoeGoe](https://github.com/CjangCjengh/MoeGoe)
 - 基于[Yiri-mirai](https://github.com/YiriMiraiProject/YiriMirai)实现

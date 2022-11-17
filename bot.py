@@ -73,7 +73,7 @@ if __name__ == '__main__':
                     os.remove(out)
                 tex= '[ZH]'+((str(event.message_chain))[3:])+'[ZH]'
                 global model
-                print('当前模型' + model)
+                print('当前模型' + str(model))
                 voiceGenerate(tex, out,int(model))
                 await bot.send(event, Voice(path=out))
             else:
@@ -94,7 +94,7 @@ if __name__ == '__main__':
                 tex = '[JA]' + translate((str(event.message_chain))[2:]) + '[JA]'
                 #获取当前模型
                 global model
-                print('当前模型' + model)
+                print('当前模型' + str(model))
                 voiceGenerate(tex, out,int(model))
                 await bot.send(event,Voice(path=out))
             else:

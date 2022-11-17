@@ -167,13 +167,13 @@ if __name__ == '__main__':
             if sa[1] in modelList:
                 global model
                 model=int(sa[1])
-                print('已切换，当前使用模型' + sa[1])
+                await bot.send(event, '已切换，当前使用模型' + sa[1])
             else:
                 await bot.send(event, '数值不合法，模型范围[0-3]')
 
         # 模型切换
         @bot.on(GroupMessage)
-        async def on_friend_message(event: GroupMessage):
+        async def on_group_message(event: GroupMessage):
             if str(event.message_chain).startswith('M'):
                 sa = str(event.message_chain).split('#')
                 modelList = ['0', '1', '2', '3']

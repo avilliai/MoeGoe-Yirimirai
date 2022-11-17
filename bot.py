@@ -19,7 +19,7 @@ if __name__ == '__main__':
     aimGroup = 699455559
     statusPath = 1
     model = 0
-    lang = '中文'
+    lang = '日语'
     @bot.on(FriendMessage)
     async def yuYinMode(event: FriendMessage):
         if str(event.message_chain).startswith('发送'):

@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="192ff880-e9d5-4b2d-9fc8-ea2971e59827" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonPlugins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonPlugins.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="192ff880-e9d5-4b2d-9fc8-ea2971e59827" name="变更" comment="把你的QQ填入config.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoeGoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/MoeGoe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,18 @@
       <workItem from="1669787672655" duration="11000" />
       <workItem from="1669788078533" duration="23000" />
       <workItem from="1669798590748" duration="1132000" />
+      <workItem from="1669818977972" duration="156000" />
+      <workItem from="1669819152284" duration="87000" />
+      <workItem from="1669827722725" duration="611000" />
     </task>
+    <task id="LOCAL-00001" summary="把你的QQ填入config.txt">
+      <created>1669819121753</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669819121753</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +114,11 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="把你的QQ填入config.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="把你的QQ填入config.txt" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonPlugins$bot.coverage" NAME="bot 覆盖结果" MODIFIED="1669787239701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonPlugins$bot.coverage" NAME="bot 覆盖结果" MODIFIED="1669819162541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

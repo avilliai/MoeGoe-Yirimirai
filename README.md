@@ -42,6 +42,9 @@
       ConnectionRefusedError: [WinError 1225] 远程网络计算机拒绝连接
       
       解决：bot.py的port,key,botqq与mirai-api-http配置不一致，修改对应即可
+    5
+      AttributeError:........
+      推测是和现有的包有冲突，不知道。换个解释器试试。实在不行用venv文件夹里的玩意替换本地的。
       
 # How to use
 下载Release或
@@ -57,7 +60,9 @@
 
    pip install -r requirements.txt
 
-修改并运行bot.py(修改QQ为你bot的QQ,port、key与你的mirai-api-http需要保持一致)
+修改并运行bot.py(修改QQ为你bot的QQ,port、key与你的mirai-api-http需要保持一致)，QQ号填config.txt里
+
+
 
 
 
@@ -71,10 +76,10 @@
 
 中文生成（群内可用）
 
-      #中文
+      中文×××
 日语生成（群内可用，改触发命令可以从bot.py改）
 
-      #说
+      说×××
 
 向群聊发送（私聊用群号为示例）
 

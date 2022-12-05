@@ -44,7 +44,7 @@
       解决：bot.py的port,key,botqq与mirai-api-http配置不一致，修改对应即可
     5
       AttributeError:........
-      推测是和现有的包有冲突，不知道。换个解释器试试。实在不行用venv文件夹里的玩意替换本地的。
+      推测是和现有的包有冲突，不知道。换个解释器试试。实在不行下载site-package并解压替换本地的site-package。
       
 # How to use
 下载Release或
@@ -60,7 +60,7 @@
 
    pip install -r requirements.txt
 
-修改并运行bot.py(修改QQ为你bot的QQ,port、key与你的mirai-api-http需要保持一致)，QQ号填config.txt里
+修改并运行bot.py(修改port、key与你的mirai-api-http需要保持一致)，QQ号填config.txt里
 
 
 

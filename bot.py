@@ -3,16 +3,19 @@ import os
 from mirai import  Voice,Image
 from mirai import Mirai, WebSocketAdapter, FriendMessage, GroupMessage, At, Plain
 
-from MoeGoe import voiceGenerate
 
 import sys
 
+from MoeGoe import voiceGenerate
+from plugins import voicePart
 from plugins.RandomStr.RandomStr import random_str
 from plugins.picGet import pic
 from trans import translate
 
 if __name__ == '__main__':
-    bot = Mirai(3093724179, adapter=WebSocketAdapter(
+
+    qq=114514#这一行填写你机器人的QQ
+    bot = Mirai(qq, adapter=WebSocketAdapter(
         verify_key='1234567890', host='localhost', port=23456
     ))
     aimFriend = 1840094972
@@ -61,49 +64,8 @@ if __name__ == '__main__':
                 await bot.send(event,"可以发点正常的数字吗")
 
 
-    #中文生成
-    @bot.on(GroupMessage)
-    async def handle_group_message(event: GroupMessage):
-        if str(event.message_chain).startswith('#中文'):
-            if len(str(event.message_chain)) <280:
-                ranpath = random_str()
-                out = sys.argv[0][:-20]+'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
-                #out = 'D:\\Mirai\\Yiris\\PythonPlugins\\plugins\\voices\\01.wav'
-                if(os.path.exists(out)):
-                    os.remove(out)
-                tex= '[ZH]'+((str(event.message_chain))[3:])+'[ZH]'
-                global model
-                print('当前模型' + str(model))
-                voiceGenerate(tex, out,int(model))
-                await bot.send(event, Voice(path=out))
-            else:
-                ranpath = random_str()
-                out = sys.argv[0][:-20]+'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
-                # out = 'D:\\Mirai\\Yiris\\PythonPlugins\\plugins\\voices\\01.wav'
-                tex = '[ZH]太常了哦......[ZH]'
-                voiceGenerate(tex, out)
-                await bot.send(event, Voice(path=out))
 
-    #日语生成
-    @bot.on(GroupMessage)
-    async def handle_group_message(event: GroupMessage):
-        if  str(event.message_chain).startswith('#说'):
-            if len(str(event.message_chain)) <280:
-                ranpath = random_str()
-                out = sys.argv[0][:-20]+'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
-                tex = '[JA]' + translate((str(event.message_chain))[2:]) + '[JA]'
-                #获取当前模型
-                global model
-                print('当前模型' + str(model))
-                voiceGenerate(tex, out,int(model))
-                await bot.send(event,Voice(path=out))
-            else:
-                #以下五行代码可以作为调用文本转语音的示例
-                ranpath = random_str()
-                out = sys.argv[0][:-20]+'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
-                tex = '[JA]' + translate('不行,太长了哦.....') + '[JA]'
-                voiceGenerate(tex, out)
-                await bot.send(event, Voice(path=out))
+
 
     #失效
     '''@bot.on(FriendMessage)
@@ -184,4 +146,8 @@ if __name__ == '__main__':
             else:
                 await bot.send(event, '数值不合法，模型范围[0-3]')
 
+
+    voicePart.main(bot)  # 语音生成（主动）
     bot.run()
+
+

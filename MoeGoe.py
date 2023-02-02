@@ -1,5 +1,8 @@
+import datetime
+
 from scipy.io.wavfile import write
 
+from plugins.RandomStr.RandomStr import random_str
 from trans import translate
 from mel_processing import spectrogram_torch
 from text import text_to_sequence, _clean_text
@@ -78,11 +81,86 @@ def get_label(text, label):
     else:
         return False, text
 
-def voiceGenerate(tex,out,speakerId=0):
+def voiceGenerate(tex,out,spealerIDDD=0,modelSelect=0):
     Path = sys.argv[0][:-23]
-    speakerIDDD=speakerId
     text=tex
     out_path=out
+    speakeriddd=spealerIDDD
+    if '--escape' in sys.argv:
+        escape = True
+    else:
+        escape = False
+
+    #model = 'voiceModel\\1374_epochs.pth'#input('Path of a VITS model: ')
+    #config ='voiceModel\\config.json'#input('Path of a config file: ')
+    if modelSelect==1:
+        model = 'voiceModel/YUUKA/G.pth'
+        config = 'voiceModel/YUUKA/config.json'
+        speakeriddd=0
+    else:
+        model = 'voiceModel/1374_epochs.pth'
+        config = 'voiceModel/config.json'
+
+    hps_ms = utils.get_hparams_from_file(config)
+    n_speakers = hps_ms.data.n_speakers if 'n_speakers' in hps_ms.data.keys() else 0
+    n_symbols = len(hps_ms.symbols) if 'symbols' in hps_ms.keys() else 0
+    speakers = hps_ms.speakers if 'speakers' in hps_ms.keys() else ['0']
+    use_f0 = hps_ms.data.use_f0 if 'use_f0' in hps_ms.data.keys() else False
+    emotion_embedding = hps_ms.data.emotion_embedding if 'emotion_embedding' in hps_ms.data.keys() else False
+
+    net_g_ms = SynthesizerTrn(
+        n_symbols,
+        hps_ms.data.filter_length // 2 + 1,
+        hps_ms.train.segment_size // hps_ms.data.hop_length,
+        n_speakers=n_speakers,
+        emotion_embedding=emotion_embedding,
+        **hps_ms.model)
+    _ = net_g_ms.eval()
+    utils.load_checkpoint(model, net_g_ms)
+
+    while True:
+        choice = 't'  # input('TTS or VC? (t/v):')
+        if choice == 't':
+            #text = input('Text to read: ')
+            if text == '[ADVANCED]':
+                text = input('Raw text:')
+                print('Cleaned text is:')
+                ex_print(_clean_text(
+                    text, hps_ms.data.text_cleaners), escape)
+                continue
+
+            length_scale, text = get_label_value(
+                text, 'LENGTH', 1, 'length scale')
+            noise_scale, text = get_label_value(
+                text, 'NOISE', 0.667, 'noise scale')
+            noise_scale_w, text = get_label_value(
+                text, 'NOISEW', 0.8, 'deviation of noise')
+            cleaned, text = get_label(text, 'CLEANED')
+
+            stn_tst = get_text(text, hps_ms, cleaned=cleaned)
+
+            #print_speakers(speakers, escape)
+            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            print(time + '| 正在使用语音模型：'+str(speakeriddd)+' ......生成中'+'  |  文本：'+tex)
+            speaker_id = speakeriddd
+
+            with no_grad():
+                x_tst = stn_tst.unsqueeze(0)
+                x_tst_lengths = LongTensor([stn_tst.size(0)])
+                sid = LongTensor([speaker_id])
+                audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=noise_scale,
+                                       noise_scale_w=noise_scale_w, length_scale=length_scale)[0][
+                    0, 0].data.cpu().float().numpy()
+
+        elif choice == 'v':
+            audio, out_path = voice_conversion()
+
+        write(out_path, hps_ms.data.sampling_rate, audio)
+        time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        print(time + '| Successfully saved!')
+        break
+
+def voice_conversion(sourcepath,speaker=0):
     if '--escape' in sys.argv:
         escape = True
     else:
@@ -108,93 +186,40 @@ def voiceGenerate(tex,out,speakerId=0):
     _ = net_g_ms.eval()
     utils.load_checkpoint(model, net_g_ms)
 
-    def voice_conversion():
-        audio_path = input('Path of an audio file to convert:\n')
-        print_speakers(speakers)
-        audio = utils.load_audio_to_torch(
-            audio_path, hps_ms.data.sampling_rate)
+    audio_path = sourcepath
+    audio = utils.load_audio_to_torch(
+        audio_path, hps_ms.data.sampling_rate)
 
-        originnal_id = get_speaker_id('Original speaker ID: ')
-        target_id = get_speaker_id('Target speaker ID: ')
-        out_path = input('Path to save: ')
+    originnal_id = speaker
+    target_id = 3
+    out_path = 'plugins\\voices\\sing\\out.wav'
 
-        y = audio.unsqueeze(0)
+    y = audio.unsqueeze(0)
 
-        spec = spectrogram_torch(y, hps_ms.data.filter_length,
-                                 hps_ms.data.sampling_rate, hps_ms.data.hop_length, hps_ms.data.win_length,
-                                 center=False)
-        spec_lengths = LongTensor([spec.size(-1)])
-        sid_src = LongTensor([originnal_id])
+    spec = spectrogram_torch(y, hps_ms.data.filter_length,
+                             hps_ms.data.sampling_rate, hps_ms.data.hop_length, hps_ms.data.win_length,
+                             center=False)
+    spec_lengths = LongTensor([spec.size(-1)])
+    sid_src = LongTensor([originnal_id])
 
-        with no_grad():
-            sid_tgt = LongTensor([target_id])
-            audio = net_g_ms.voice_conversion(spec, spec_lengths, sid_src=sid_src, sid_tgt=sid_tgt)[
-                0][0, 0].data.cpu().float().numpy()
-        return audio, out_path
+    with no_grad():
+        sid_tgt = LongTensor([target_id])
+        audio = net_g_ms.voice_conversion(spec, spec_lengths, sid_src=sid_src, sid_tgt=sid_tgt)[
+            0][0, 0].data.cpu().float().numpy()
+    write(out_path, hps_ms.data.sampling_rate, audio)
+    print('Successfully saved!')
+    return out_path
 
-    while True:
-        choice = 't'  # input('TTS or VC? (t/v):')
-        if choice == 't':
-            #text = input('Text to read: ')
-            if text == '[ADVANCED]':
-                text = input('Raw text:')
-                print('Cleaned text is:')
-                ex_print(_clean_text(
-                    text, hps_ms.data.text_cleaners), escape)
-                continue
-
-            length_scale, text = get_label_value(
-                text, 'LENGTH', 1, 'length scale')
-            noise_scale, text = get_label_value(
-                text, 'NOISE', 0.667, 'noise scale')
-            noise_scale_w, text = get_label_value(
-                text, 'NOISEW', 0.8, 'deviation of noise')
-            cleaned, text = get_label(text, 'CLEANED')
-
-            stn_tst = get_text(text, hps_ms, cleaned=cleaned)
-
-            #print_speakers(speakers, escape)
-            print('正在使用语音模型：'+str(speakerIDDD)+'......生成中')
-            speaker_id = speakerIDDD
-
-            with no_grad():
-                x_tst = stn_tst.unsqueeze(0)
-                x_tst_lengths = LongTensor([stn_tst.size(0)])
-                sid = LongTensor([speaker_id])
-                audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=noise_scale,
-                                       noise_scale_w=noise_scale_w, length_scale=length_scale)[0][
-                    0, 0].data.cpu().float().numpy()
-
-        elif choice == 'v':
-            audio, out_path = voice_conversion()
-
-        write(out_path, hps_ms.data.sampling_rate, audio)
-        print('Successfully saved!')
-        break
-
-import random
-
-
-def random_str(random_length=6):
-    """
-    生成随机字符串作为验证码
-    :param random_length: 字符串长度,默认为6
-    :return: 随机字符串
-    """
-    string = 'a'
-    chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789@$#_%'
-    length = len(chars) - 1
-    # random = Random()
-    # 设置循环每次取一个字符用来生成随机数
-    for i in range(7):
-        string +=  ((chars[random.randint(0, length)])+'a')
-    return string
 
 if __name__ == '__main__':
-    ranpath = random_str()
-    out = 'voices\\' + ranpath + '.wav'
-    tex = '[JA]' + translate('你想说什么呢，我在听.....') + '[JA]'
-    voiceGenerate(tex, out)
+    #voice_conversion("plugins/voices/sing/rest.wav")
+    voiceGenerate('先生,ちょっとお時間..いただけますか?','voiceModel/YUUKA/1.wav',0,1)
+    '''ranpath = random_str()
+    Path=sys.argv[0][:-23]
+    print(Path)
+    out = Path+'PythonPlugins\\plugins\\voices\\' + ranpath + '.wav'
+    tex = '[JA]' + translate('测试语音.....') + '[JA]'
+    voiceGenerate(tex, out)'''
     '''if '--escape' in sys.argv:
         escape = True
     else:

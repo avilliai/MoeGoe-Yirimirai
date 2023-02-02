@@ -15,7 +15,7 @@ from trans import translate
 def main(bot):
     time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(time + '| voiceGenerate module loaded successfully 已加载--- 语音生成 ---模块')
-    # 中文生成
+    # 中文生成1
     global voiceSender
     voiceSender = 0
     global voiceTrans

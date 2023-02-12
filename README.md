@@ -57,50 +57,24 @@
 
 修改并运行bot.py(修改port、key与你的mirai-api-http需要保持一致)
 
+发送 voice 查看帮助菜单
 
+# 导入模型
 
+在voiceModel文件夹下新建文件夹，把.pth(模型文件)和config.json(配置文件)放进去
 
-
-发送语音指令如下：
--
-
-
-向指定目标发送命令（私聊窗口用，先连接群或好友才能发送）
-
-      发送×××
-
-中文生成（群内可用）
-
-      中文×××
-日语生成（群内可用，改触发命令可以从bot.py改）
-
-      说×××
-      
-      优香说
-
-
-向群聊发送（私聊用群号为示例）
-
-       连接群#699455559
-向个人发送（由于腾讯更新私聊语音加密，不能用了）
-
-        连接对象#1840094972
-
-语言切换
-
-         切换中文
-         切换日语
- 
-模型切换
-
-          M#0
-          M#1
-         
-音色切换
+        下载模型
         
-          S#1
+            https://www.bilibili.com/video/BV1wG4y1M7SL/?spm_id_from=333.999.0.0
+            
+            https://github.com/CjangCjengh/TTSModels
+            
 
-附加小功能
+		模型命名规则(重要)：
+			多语种模型：后缀名前面加一个m,如yuuka.pth支持中日双语，则改成yuukam.pth
+			单语种模型：不用改名
 
-         /pic数字（api没了，暂时坏了）
- 
+		配置文件：
+			模型来自saya佬：打开config.json修改speakers，把一大串speakers修改为一个(名称随意) | 中文名的speaker需要转unicode | https://www.xgjzx.cn/chinese
+			模型来自CjangCjengh：直接用
+		

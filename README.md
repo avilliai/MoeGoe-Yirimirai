@@ -63,18 +63,18 @@
 
 在voiceModel文件夹下新建文件夹，把.pth(模型文件)和config.json(配置文件)放进去
 
-        下载模型
+下载模型
         
-            https://www.bilibili.com/video/BV1wG4y1M7SL/?spm_id_from=333.999.0.0
+[碧蓝档案主题](https://www.bilibili.com/video/BV1wG4y1M7SL/?spm_id_from=333.999.0.0)
             
-            https://github.com/CjangCjengh/TTSModels
+[CjangCjengh的模型仓库](https://github.com/CjangCjengh/TTSModels)
             
 
-		模型命名规则(重要)：
-			多语种模型：后缀名前面加一个m,如yuuka.pth支持中日双语，则改成yuukam.pth
-			单语种模型：不用改名
+	模型命名规则(重要)：
+		多语种模型：后缀名前面加一个m,如yuuka.pth支持中日双语，则改成yuukam.pth
+		单语种模型：不用改名
 
-		配置文件：
-			模型来自saya佬：打开config.json修改speakers，把一大串speakers修改为一个(名称随意) | 中文名的speaker需要转unicode | https://www.xgjzx.cn/chinese
-			模型来自CjangCjengh：直接用
+	配置文件修改：
+		模型来自saya佬：打开config.json修改speakers，把一大串speakers修改为一个(名称随意) | 中文名的speaker需要转unicode | https://www.xgjzx.cn/chinese
+		模型来自CjangCjengh：直接用
 		

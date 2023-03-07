@@ -99,7 +99,7 @@
 ![image](https://user-images.githubusercontent.com/99066610/223444630-8c5e2a02-df4d-488a-954d-a68c92d3e491.png)
 
 
-**修改后如图**
+**修改后："speakers": ["\u963f\u55b5\u55b5"]**
 
 ![image](https://user-images.githubusercontent.com/99066610/223444725-4a6fe6f6-9225-4cd4-aa1b-7277b92d89f9.png)
 

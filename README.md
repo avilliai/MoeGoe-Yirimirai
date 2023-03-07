@@ -81,7 +81,7 @@
 		模型来自saya佬：打开config.json修改speakers，把一大串speakers修改为一个(名称随意) | 中文名的speaker需要转unicode | https://www.xgjzx.cn/chinese
 		模型来自CjangCjengh：直接用
 		
-# 模型名称与config.json文件的修改
+# 模型名称与config.json文件的修改(导入模型的详解)
 
 **以碧蓝档案的模型库为例**
 

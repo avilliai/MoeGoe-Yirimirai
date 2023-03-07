@@ -81,26 +81,26 @@
 		模型来自saya佬：打开config.json修改speakers，把一大串speakers修改为一个(名称随意) | 中文名的speaker需要转unicode | https://www.xgjzx.cn/chinese
 		模型来自CjangCjengh：直接用
 		
-**config.json文件的修改**
+# config.json文件的修改
 
-	**以碧蓝档案的模型库为例**
-	
-	*碧蓝档案模型库的模型大都是单角色，它的配置文件是多模型通用的，但为了更方便地使用，我们需要修改config.json*
-	
-	**在[这个网站](https://www.xgjzx.cn/chinese)把角色的名称转成对应的unicode编码**
-	
-	![633231ce-c8cf-43bb-8617-4acf44d24e45-image.png](/assets/uploads/files/1678196359711-633231ce-c8cf-43bb-8617-4acf44d24e45-image.png) 
-	
-	打开config.json文件，把上一步得到的角色名称的unicode码填入speakers项。
-	
-	**修改前："speakers":["这里是一大堆东西，全删掉"]**
-	
-	![340501e5-4065-4d78-abfe-e8000dcd321d-image.png](/assets/uploads/files/1678196675709-340501e5-4065-4d78-abfe-e8000dcd321d-image.png) 
+**以碧蓝档案的模型库为例**
 
-	**修改后如图**
-	
-	![71291c49-5ea4-4615-ac7a-4b80890bdfc6-image.png](/assets/uploads/files/1678196514483-71291c49-5ea4-4615-ac7a-4b80890bdfc6-image.png)
-	
-	**需要注意
-	
-	如果模型支持中日双语则需要把模型名从XXX.pth改成XXXm.pth**
+*碧蓝档案模型库的模型大都是单角色，它的配置文件是多模型通用的，但为了更方便地使用，我们需要修改config.json*
+
+**在[这个网站](https://www.xgjzx.cn/chinese)把角色的名称转成对应的unicode编码**
+
+![633231ce-c8cf-43bb-8617-4acf44d24e45-image.png](/assets/uploads/files/1678196359711-633231ce-c8cf-43bb-8617-4acf44d24e45-image.png) 
+
+打开config.json文件，把上一步得到的角色名称的unicode码填入speakers项。
+
+**修改前："speakers":["这里是一大堆东西，全删掉"]**
+
+![340501e5-4065-4d78-abfe-e8000dcd321d-image.png](/assets/uploads/files/1678196675709-340501e5-4065-4d78-abfe-e8000dcd321d-image.png) 
+
+**修改后如图**
+
+![71291c49-5ea4-4615-ac7a-4b80890bdfc6-image.png](/assets/uploads/files/1678196514483-71291c49-5ea4-4615-ac7a-4b80890bdfc6-image.png)
+
+**需要注意
+
+如果模型支持中日双语则需要把模型名从XXX.pth改成XXXm.pth**

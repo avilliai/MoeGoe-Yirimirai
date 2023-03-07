@@ -81,7 +81,7 @@
 		模型来自saya佬：打开config.json修改speakers，把一大串speakers修改为一个(名称随意) | 中文名的speaker需要转unicode | https://www.xgjzx.cn/chinese
 		模型来自CjangCjengh：直接用
 		
-# config.json文件的修改
+# 模型名称与config.json文件的修改
 
 **以碧蓝档案的模型库为例**
 
@@ -89,18 +89,21 @@
 
 **在[这个网站](https://www.xgjzx.cn/chinese)把角色的名称转成对应的unicode编码**
 
-![633231ce-c8cf-43bb-8617-4acf44d24e45-image.png](/assets/uploads/files/1678196359711-633231ce-c8cf-43bb-8617-4acf44d24e45-image.png) 
+![image](https://user-images.githubusercontent.com/99066610/223444528-6095f225-f9f6-4154-af3b-ecfd120fd563.png)
+
 
 打开config.json文件，把上一步得到的角色名称的unicode码填入speakers项。
 
 **修改前："speakers":["这里是一大堆东西，全删掉"]**
 
-![340501e5-4065-4d78-abfe-e8000dcd321d-image.png](/assets/uploads/files/1678196675709-340501e5-4065-4d78-abfe-e8000dcd321d-image.png) 
+![image](https://user-images.githubusercontent.com/99066610/223444630-8c5e2a02-df4d-488a-954d-a68c92d3e491.png)
+
 
 **修改后如图**
 
-![71291c49-5ea4-4615-ac7a-4b80890bdfc6-image.png](/assets/uploads/files/1678196514483-71291c49-5ea4-4615-ac7a-4b80890bdfc6-image.png)
+![image](https://user-images.githubusercontent.com/99066610/223444725-4a6fe6f6-9225-4cd4-aa1b-7277b92d89f9.png)
 
-**需要注意
 
-如果模型支持中日双语则需要把模型名从XXX.pth改成XXXm.pth**
+**需要注意**
+
+如果模型支持中日双语则需要把模型名从XXX.pth改成XXXm.pth

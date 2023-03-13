@@ -46,17 +46,17 @@
       推测是和现有的包有冲突，不知道。换个解释器试试。实在不行下载site-package并解压替换本地的site-package。
       
 # How to use
-下载Release,不要克隆仓库
+ - 下载Release,不要克隆仓库
 
-打开cmd运行如下命令
+ - 进入bot.py所在目录，打开cmd运行如下命令
 
-   pip install -r requirements.txt
+   	pip install -r requirements.txt
 
-修改config.json并运行bot.py(修改port、key与你的mirai-api-http需要保持一致)
+ - 修改config.json并运行bot.py(修改port、key与你的mirai-api-http需要保持一致)
 
-发送 voice 查看帮助菜单
+	发送 voice 查看帮助菜单
 
-发送 sp 查看当前可用的所有角色
+	发送 sp 查看当前可用的所有角色
 
 # 导入更多模型(可选)
 

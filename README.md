@@ -2,7 +2,7 @@
 - 移除不必要的代码和文件。群内可切换音色
 - 你可以导入自己的模型，在voiceModel文件夹下新建一个文件夹，把模型和配置文件放进去就好了。(多种语言的模型需要把后缀改成m.pth)
 - 群内发送 voice 查看当前模型信息与使用提示
-- 设置语音回复，可以参考[wReply](https://mirai.mamoe.net/topic/1842/%E4%BB%8E%E5%A4%96%E9%83%A8%E5%AF%BC%E5%85%A5%E8%AF%8D%E5%BA%93-%E5%8F%AF%E5%9C%A8%E7%BE%A4%E5%86%85%E7%AE%A1%E7%90%86-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%9E%E5%A4%8D)
+- 设置语音回复，可以参考[wReply](https://github.com/avilliai/wReply)
 
 
 # Links

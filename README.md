@@ -56,7 +56,7 @@
 
    pip install -r requirements.txt
 
-修改并运行bot.py(修改port、key与你的mirai-api-http需要保持一致)
+修改config.json并运行bot.py(修改port、key与你的mirai-api-http需要保持一致)
 
 发送 voice 查看帮助菜单
 

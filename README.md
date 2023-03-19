@@ -8,7 +8,6 @@
 - 项目最核心的部分是CjangCjengh佬的[MoeGoe](https://github.com/CjangCjengh/MoeGoe)
 - 基于[Yiri-mirai](https://github.com/YiriMiraiProject/YiriMirai)实现
 - python版本推荐3.9  不推荐python3.10
-- 1374模型来自[Pretrained models](https://sjtueducn-my.sharepoint.com/personal/cjang_cjengh_sjtu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang%2F1374%5Fepochs%2Epth&parent=%2Fpersonal%2Fcjang%5Fcjengh%5Fsjtu%5Fedu%5Fcn%2FDocuments%2Fvits%5Fmodels%2Fnene%2Bnanami%2Brong%2Btang&ga=1)
 - 请确保已安装[mirai-api-http](https://github.com/project-mirai/mirai-api-http)
 
 
@@ -68,9 +67,13 @@
 
 下载模型
         
-[碧蓝档案主题](https://www.bilibili.com/video/BV1wG4y1M7SL/?spm_id_from=333.999.0.0)
+下载模型
+        
+[碧蓝档案主题模型](https://www.bilibili.com/video/BV1wG4y1M7SL/?spm_id_from=333.999.0.0)
             
 [CjangCjengh的模型仓库](https://github.com/CjangCjengh/TTSModels)
+
+[**已修改配置文件的模型仓库**](https://pan.baidu.com/s/1bEbDMv0Ysj0cRmwHi6WAyA?pwd=9rmj),下载后放在项目对应文件夹下即可。
             
 
 	模型命名规则(重要)：

@@ -47,6 +47,8 @@
       
 # How to use
  - 下载Release,不要克隆仓库
+ 
+ - 解压，安装压缩包里的python
 
  - 进入bot.py所在目录，打开cmd运行如下命令
 

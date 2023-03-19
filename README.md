@@ -1,4 +1,5 @@
 # 不 要 克 隆 仓 库
+有release。
 # 更新
 - 支持导入模型，XX说
 - 设置语音回复，可以参考[wReply](https://github.com/avilliai/wReply)

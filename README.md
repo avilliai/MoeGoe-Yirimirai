@@ -1,5 +1,5 @@
 # 不 要 克 隆 仓 库
-- 克隆仓库用不了
+- 克隆仓库用不了,几个月没push过。用右上角release。
 # 更新
 - 支持导入模型，XX说
 - 设置语音回复，可以参考[wReply](https://github.com/avilliai/wReply)

@@ -1,5 +1,6 @@
 # 不 要 克 隆 仓 库
 - 克隆仓库用不了,几个月没push过。用右上角release。
+- 看到黄字推荐 pip install uvicorn时,忽略即可,安装将导致无法正常运行程序。
 # 更新
 - 支持导入模型，XX说
 - 设置语音回复，可以参考[wReply](https://github.com/avilliai/wReply)
@@ -36,6 +37,7 @@
       TyreError: run() got an unexpected keyword argument 'debug'
       
       解决：python版本不对，推荐换3.9
+           pip uninstall uvicorn
       
     4
     
@@ -49,13 +51,13 @@
 # How to use
  - 下载Release,不要克隆仓库
  
- - 解压，安装压缩包里的python
+ - 解压，安装压缩包里的python(记得勾选add to path)
 
  - 进入bot.py所在目录，打开cmd运行如下命令
 
    	pip install -r requirements.txt
 
- - 修改config.json并运行bot.py(修改port、key与你的mirai-api-http需要保持一致)
+ - 修改config.json并运行bot.py(修改botqq、port、key与你的mirai-api-http需要保持一致,botName和master是可选内容)
 
 	发送 voice 查看帮助菜单
 

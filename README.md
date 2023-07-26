@@ -1,3 +1,5 @@
+# 此仓库不再更新，全部功能已转移至[Manyana](https://github.com/avilliai/Manyana)
+
 # 不 要 克 隆 仓 库
 - 克隆仓库用不了,几个月没push过。用右上角release。
 - 看到黄字推荐 pip install uvicorn时,忽略即可,安装将导致无法正常运行程序。
